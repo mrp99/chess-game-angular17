@@ -1,6 +1,7 @@
 import { Color, Coords, FENChar } from "../models";
 
 export abstract class Piece {
+
   protected abstract _FENChar: FENChar;
   protected abstract _direcitons: Coords[];
 

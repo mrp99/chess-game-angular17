@@ -8,9 +8,11 @@ import { Color, FENChar, pieceImagePaths } from 'src/app/chess-logic/models';
   styleUrl: './chess-board.component.css'
 })
 export class ChessBoardComponent {
+
   public pieceImagePaths = pieceImagePaths;
 
   private chessBoard = new ChessBoard();
+
   public chessBoardView: (FENChar | null)[][] = this.chessBoard.chessBoardView;
 
   public get playerColor(): Color { return this.chessBoard.playerColor; };
