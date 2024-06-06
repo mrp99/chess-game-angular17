@@ -1,9 +1,12 @@
-import { FENChar, Coords, Color } from "../models";
+import { Color, Coords, FENChar } from "../models";
 import { Piece } from "./piece";
 
-export class Knigth extends Piece {
-  protected override _FENChar: FENChar;
-  protected override _direcitons: Coords[] = [
+
+export class Knight extends Piece {
+  protected override _FENChar: FENChar = (this.pieceColor === Color.White)
+    ? FENChar.WhiteKnight
+    : FENChar.BlackKnight;
+  protected override _directions: Coords[] = [
     { x: 1, y: 2 },
     { x: 1, y: -2 },
     { x: -1, y: 2 },
@@ -16,6 +19,5 @@ export class Knigth extends Piece {
 
   constructor(private pieceColor: Color) {
     super(pieceColor);
-    this._FENChar = pieceColor === Color.White ? FENChar.WhiteKnight : FENChar.WhiteKnight;
   }
 }

@@ -1,5 +1,6 @@
 export enum Color {
-  White, Black
+  White,
+  Black
 }
 
 export type Coords = {
